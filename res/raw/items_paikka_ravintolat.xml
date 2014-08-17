@@ -1,0 +1,27 @@
+﻿<ravintolat>
+	<paikka>
+		<nimi>Buffet Silja Line</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Laaja valikoima alkupaloja, pääruokia ja jälkiruokia.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Grill House</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Herkullisia annoksia pieneen ja suureen nälkään.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Katarina's Kitchen</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Lämminhenkinen ja tyylikäs ravintola, jossa bistrotyylinen ruokalista.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Happy Lobster</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Itämeren kuuluisin kala- ja äyriäisravintola.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Cafeteria</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Kannen 6 keulassa sijaitseva Cafeteria tarjoaa vaihtoehtoja sekä suolaiseen että makeaan nälkään.</kuvaus>
+	</paikka>			
+</ravintolat>

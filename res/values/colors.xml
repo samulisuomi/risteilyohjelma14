@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="joulup">#b50000</color>
+    <color name="joulup_logo">#f7161a</color>
+    <color name="jouluk">#fff200</color>
+    <color name="fragment_tausta">#1c1d1e</color>
+    <color name="paikka_oranssi">#ffa800</color>
+    <color name="kuvaus_harmaa">#e4e4e4</color>
+    <color name="grey">#828282</color>
+    
+</resources>

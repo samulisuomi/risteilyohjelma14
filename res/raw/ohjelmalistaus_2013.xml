@@ -1,0 +1,234 @@
+﻿<ohjelma>
+	<tapahtuma>
+		<alkaa>20:15</alkaa>
+		<paattyy></paattyy>
+		<nimi>Baltic Princess lähtee Turusta</nimi>
+		<paikka></paikka>
+		<kuvaus>Ravintolat aukeavat</kuvaus>
+		<kansi></kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>21:00</alkaa>
+		<paattyy>22:30</paattyy>
+		<nimi>Tervetulotilaisuus</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus>Ohjelmassa arvontaa, komiikkaa, sirkus, Heartbeat Dancers. LAL jakaa opiskelijastipendit aktiivitoimijoilleen.</kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>20:45</alkaa>
+		<paattyy>23:30</paattyy>
+		<nimi>Pianomusiikkia</nimi>
+		<paikka>Piano Bar</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>21:15</alkaa>
+		<paattyy>23:00</paattyy>
+		<nimi>Trubaduuri Vaakku</nimi>
+		<paikka>Pub</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>21:30</alkaa>
+		<paattyy>23:00</paattyy>
+		<nimi>Karaoke</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>22:30</alkaa>
+		<paattyy>23:30</paattyy>
+		<nimi>I Love Vivian</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>		
+	<tapahtuma>
+		<alkaa>22:45</alkaa>
+		<paattyy>01:00</paattyy>
+		<nimi>Ankkuri-Appro!</nimi>
+		<paikka>Starlight Palace + muut baarit</paikka>
+		<kuvaus>Karttoja voi vaihtaa merkkeihin klo 0:00-1:00 infon läheisyydessä. Lippuja myyty ennakkoon!</kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>23:00</alkaa>
+		<paattyy>01:00</paattyy>
+		<nimi>Guitar Hero</nimi>
+		<paikka>Pub</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>23:00</alkaa>
+		<paattyy>04:30</paattyy>
+		<nimi>DJ Tomi</nimi>
+		<paikka>Klubi</paikka>
+		<kuvaus></kuvaus>
+		<kansi>10</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>23:15</alkaa>
+		<paattyy>01:30</paattyy>
+		<nimi>Housebändi Enjoy Band</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>23:30</alkaa>
+		<paattyy>00:00</paattyy>
+		<nimi>Koomikko Arimo Mustonen</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>00:00</alkaa>
+		<paattyy>01:00</paattyy>
+		<nimi>Bad King</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>01:15</alkaa>
+		<paattyy>02:30</paattyy>
+		<nimi>Bilebändi Blaster</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>02:30</alkaa>
+		<paattyy>04:30</paattyy>
+		<nimi>DJ:t Anza ja PeterPan</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>11:30</alkaa>
+		<paattyy>12:15</paattyy>
+		<nimi>Pianomusiikkia</nimi>
+		<paikka>Piano Bar</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>12:00</alkaa>
+		<paattyy>15:00</paattyy>
+		<nimi>Guitar Hero</nimi>
+		<paikka>Pub</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>12:00</alkaa>
+		<paattyy></paattyy>
+		<nimi>Tietovisa</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>	
+	<tapahtuma>
+		<alkaa>12:30</alkaa>
+		<paattyy></paattyy>
+		<nimi>Super Jackpot Bingo</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>13:00</alkaa>
+		<paattyy>13:30</paattyy>
+		<nimi>Jouluristeilyn Bingo</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>13:30</alkaa>
+		<paattyy>15:00</paattyy>
+		<nimi>Karaoke</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>	
+	<tapahtuma>
+		<alkaa>14:00</alkaa>
+		<paattyy>16:00</paattyy>
+		<nimi>Jouluristeilyn Rastikierros</nimi>
+		<paikka>Lähtö: Piano Bar</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>14:45</alkaa>
+		<paattyy></paattyy>
+		<nimi>Suomipop-musavisa</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>15:00</alkaa>
+		<paattyy>17:45</paattyy>
+		<nimi>Trubaduuri Vaakku</nimi>
+		<paikka>Pub</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>	
+	<tapahtuma>
+		<alkaa>15:30</alkaa>
+		<paattyy>17:15</paattyy>
+		<nimi>Housebändi Enjoy Band</nimi>
+		<paikka>Iskelmä Baari</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>15:30</alkaa>
+		<paattyy>17:15</paattyy>
+		<nimi>DJ Tomi</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>16:45</alkaa>
+		<paattyy>17:30</paattyy>
+		<nimi>Pianomusiikkia</nimi>
+		<paikka>Piano Bar</paikka>
+		<kuvaus></kuvaus>
+		<kansi>7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>17:15</alkaa>
+		<paattyy>17:30</paattyy>
+		<nimi>Rastikierroksen palkintojenjako</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>17:30</alkaa>
+		<paattyy>18:45</paattyy>
+		<nimi>Bilebändi Blaster</nimi>
+		<paikka>Starlight Palace</paikka>
+		<kuvaus></kuvaus>
+		<kansi>6-7</kansi>
+	</tapahtuma>
+	<tapahtuma>
+		<alkaa>19:15</alkaa>
+		<paattyy></paattyy>
+		<nimi>Baltic Princess saapuu Turkuun</nimi>
+		<paikka></paikka>
+		<kuvaus>After Lecturen miehistö kiittää ja toivottaa teidät tervetulleeksi uudestaan jälleen ensi vuonna.</kuvaus>
+		<kansi></kansi>
+	</tapahtuma>		
+</ohjelma>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/joulup" >
+    
+	<ImageView
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+
+    	android:src="@drawable/background_menu_portrait"
+    	android:scaleType="fitCenter"
+    	android:layout_gravity="center_vertical" />
+    
+    <ImageView 
+    	android:src="@drawable/afterlecture"
+    	android:id="@+id/afterlogo"
+   		android:layout_width="wrap_content"
+   		android:layout_height="50dp"
+   		android:layout_margin="0dp"
+   		android:layout_gravity="bottom|center_horizontal"
+   		android:scaleType="fitCenter"
+    	android:padding="0dp"
+    	android:adjustViewBounds="true" />
+    
+</FrameLayout>

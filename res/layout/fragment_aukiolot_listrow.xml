@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+   	android:paddingBottom="4dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/list_row_circle"
+        android:layout_width="16dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+       	android:src="@drawable/circle_off"
+       	android:layout_gravity="center_vertical"
+       	android:scaleType="fitCenter" />    
+    <TextView
+		android:id="@+id/aukiolopaikannimi"
+		android:layout_width="0dip"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textSize="22sp"
+		android:layout_weight="1"
+		android:textAlignment="textStart"
+		android:layout_gravity="center_vertical"
+		android:textColor="@color/white"
+		android:padding="0dp" />     
+    <TextView
+        android:id="@+id/kansinumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="6dp"
+        android:textStyle="bold"
+        android:typeface="sans" 
+        android:textSize="24sp"
+        android:textColor="@color/kuvaus_harmaa" />
+
+</LinearLayout> 

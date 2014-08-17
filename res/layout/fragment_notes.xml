@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:background="@color/fragment_tausta" >
+	<TextView
+    	android:id="@+id/hytti_ohje"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/hyttimuistio_tyhja_lista"
+    	android:textAlignment="center"
+    	android:layout_gravity="center"
+    	android:padding="16dp"
+    	android:gravity="center"
+    	android:textSize="16sp"
+    	android:textColor="#7c7c7c" />
+	<ListView
+        android:id="@+id/listview_hytit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="multipleChoice" >
+    </ListView>
+    <LinearLayout
+        android:id="@+id/hytinlisayspalkki"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/edittext_hyttinumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:hint="@string/nro"
+            android:maxLength="5"
+            android:imeOptions="actionNext"/>
+
+        <EditText
+            android:id="@+id/edittext_hyttiosallistujat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textCapSentences"
+            android:hint="@string/hyttilaiset"
+            android:maxLength="64"
+            android:imeOptions="actionDone"/>
+        
+        <Button
+            android:id="@+id/button_tallennaHytti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tallenna" />
+      
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+﻿<ostokset>
+	<paikka>
+		<nimi>Tax Free</nimi>
+		<kansi>6</kansi>
+		<kuvaus>HUOM! Tax Freessä ei alkoholimyyntiä menomatkalla. Nuuskaa on myynnissä myös Klubissa ja Buffet-aamiaisella.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Tax Free (alkoholimyynti)</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Tax Freessä alkoholimyynti vasta tulomatkalla.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Tax Free (nuuskan myynti)</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Nuuskaa on myynnissä myös Klubissa ja Buffet-aamiaisella.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Tobacco</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Savukkeet, sikarit ja piipputupakka sekä niihin liittyvät oheistuotteet.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Gift&amp;Toys</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Lahja- ja sisustustavaroita, leluja ja matkamuistoja.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Perfumes</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Valikoima parfyymi- ja kosmetiikkatuotteita sekä koruja.</kuvaus>
+	</paikka>
+		<paikka>
+		<nimi>Fashion Street</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Trendikäs vaate- ja asustemyymälä.</kuvaus>
+	</paikka>
+</ostokset>

@@ -1,0 +1,27 @@
+﻿<baarit>
+	<paikka>
+		<nimi>Starlight Palace</nimi>
+		<kansi>6-7</kansi>
+		<kuvaus>Art Deco -tyyliin sisustettu yökerho, casino sekä kaksi drinkkibaaria.</kuvaus>
+	</paikka>
+	<paikka>
+		<nimi>Iskelmä Baari</nimi>
+		<kansi>6</kansi>
+		<kuvaus>Tanssiravintola, jossa kotimainen musiikki soi melkein aamusta alkaen.</kuvaus>
+	</paikka>	
+	<paikka>
+		<nimi>Pubi</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Poikkea lepuuttamaan jalkoja viskin ja hyvän oluen kera.</kuvaus>
+	</paikka>	
+	<paikka>
+		<nimi>Piano Bar</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Pieni ja mukava baari, jossa voi viettää aikaa ja rentoutua.</kuvaus>
+	</paikka>	
+	<paikka>
+		<nimi>Klubi</nimi>
+		<kansi>10</kansi>
+		<kuvaus>DJ tanssimusiikkeineen virittää yön tunnelmaan.</kuvaus>
+	</paikka>	
+</baarit>

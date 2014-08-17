@@ -1,0 +1,22 @@
+﻿<ao>
+	<aukiolo>
+		<alkaa>20:15</alkaa>
+		<paattyy>22:00</paattyy>
+		<lisatieto>Illallisbuffet, 1. kattaus</lisatieto>
+	</aukiolo>
+	<aukiolo>
+		<alkaa>22:00</alkaa>
+		<paattyy>24:00</paattyy>
+		<lisatieto>Illallisbuffet, 2. kattaus</lisatieto>
+	</aukiolo>
+	<aukiolo>
+		<alkaa>06:00</alkaa>
+		<paattyy>11:00</paattyy>
+		<lisatieto>Meriaamiainen</lisatieto>
+	</aukiolo>
+	<aukiolo>
+		<alkaa>14:00</alkaa>
+		<paattyy>16:00</paattyy>
+		<lisatieto>Lounas</lisatieto>
+	</aukiolo>
+</ao>

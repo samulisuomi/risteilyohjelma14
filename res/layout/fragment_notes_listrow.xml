@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+	<TextView
+        android:id="@+id/nroLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        android:textColor="@color/joulup_logo"
+        android:padding="0dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/tekstiLabel"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true" 
+        android:textSize="18sp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textAlignment="gravity" >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:button="@drawable/custom_checkbox_delete"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+    </CheckBox>
+
+</LinearLayout> 
