@@ -8,6 +8,9 @@ import java.util.TimeZone;
 
 public class TimeHelper {
 
+    private static final String TO_PVM = "2014-11-27";
+    private static final String PE_PVM = "2014-11-28";
+
     public static String getCurrentTime() {
         DateFormat df = new SimpleDateFormat("HH:mm");
         df.setTimeZone(TimeZone.getTimeZone("GMT+2"));
@@ -28,17 +31,15 @@ public class TimeHelper {
         format.setTimeZone(TimeZone.getTimeZone("GMT+2"));
         Date date;
         long timestamp;
-        String toPvm = "2013-11-28";
-        String pePvm = "2013-11-29";
         String fullString;
         try {
             // if 20:00-24:00 -> 28.11
             if (hhMm.compareTo("20:00") >= 0) {
-                fullString = toPvm + " " + hhMm;
+                fullString = TO_PVM + " " + hhMm;
             }
             // if 00:00-19:59 --> 29.11
             else {
-                fullString = pePvm + " " + hhMm;
+                fullString = PE_PVM + " " + hhMm;
             }
             date = format.parse(fullString);
             timestamp = date.getTime();

@@ -35,7 +35,7 @@ public class OhjelmaFragment extends SherlockFragment {
     private Runnable updateRunnable;
     private final static int REFRESH_INTERVAL = 1000 * 5; // 5 seconds
     private List<OhjelmaItem> ohjelmaItems;
-    private static int XML_RESOURCE_ID = R.raw.ohjelmalistaus_2013;
+    private static int XML_RESOURCE_ID = R.raw.ohjelmalistaus_2014;
 
     public OhjelmaFragment() {
 
