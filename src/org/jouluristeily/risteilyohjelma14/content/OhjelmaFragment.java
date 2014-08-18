@@ -234,9 +234,9 @@ public class OhjelmaFragment extends SherlockFragment {
                 viewHolder.kansinumeroView.setTextColor(getResources()
                         .getColor(R.color.white));
                 viewHolder.tapahtumanimiView.setTextColor(getResources()
-                        .getColor(R.color.jouluk));
+                        .getColor(R.color.jouluk_muted));
                 viewHolder.tapahtumapaikkaView.setTextColor(getResources()
-                        .getColor(R.color.paikka_oranssi));
+                        .getColor(R.color.joulup_muted));
                 viewHolder.tapahtumakuvausView.setTextColor(getResources()
                         .getColor(R.color.kuvaus_harmaa));
                 viewHolder.valiviivaView.setTextColor(getResources().getColor(
