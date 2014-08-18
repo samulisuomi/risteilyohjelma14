@@ -7,7 +7,8 @@
     <color name="black">#000</color>
     <color name="joulup">#b50000</color>
     <color name="joulup_logo">#f7161a</color>
-    <color name="jouluk">#fff200</color>
+    <color name="jouluk">#ffea00</color>
+    <color name="jouluk_vanha">#fff200</color>
     <color name="fragment_tausta">#1c1d1e</color>
     <color name="paikka_oranssi">#ffa800</color>
     <color name="kuvaus_harmaa">#e4e4e4</color>
