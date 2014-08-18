@@ -6,7 +6,7 @@
     android:id="@+id/menu_list_header_root" >
     <ImageView 
         android:src="@drawable/headertext"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="32dp"
