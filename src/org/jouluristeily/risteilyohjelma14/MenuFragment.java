@@ -1,6 +1,7 @@
 package org.jouluristeily.risteilyohjelma14;
 
 import org.jouluristeily.risteilyohjelma14.content.AukioloFragment;
+import org.jouluristeily.risteilyohjelma14.content.FeedFragment;
 import org.jouluristeily.risteilyohjelma14.content.HyttiFragment;
 import org.jouluristeily.risteilyohjelma14.content.KarttaFragment;
 import org.jouluristeily.risteilyohjelma14.content.OhjelmaFragment;
@@ -25,6 +26,7 @@ public class MenuFragment extends SherlockListFragment {
     private AukioloFragment aF;
     private KarttaFragment kF;
     private HyttiFragment hF;
+    private FeedFragment fF;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,6 +74,9 @@ public class MenuFragment extends SherlockListFragment {
             case 3: // hyttifragment
                 buttonImgRes = R.layout.menu_button_selector_hyttimuistio;
                 break;
+            case 4: // feedfragment
+                buttonImgRes = R.layout.menu_button_selector_feed;
+                break;
             }
             adapter.add(new MenuItem(contents[i], buttonImgRes));
         }
@@ -109,6 +114,13 @@ public class MenuFragment extends SherlockListFragment {
                 newContent = new HyttiFragment();
             } else {
                 newContent = hF;
+            }
+            break;
+        case R.layout.menu_button_selector_feed:
+            if (hF == null) {
+                newContent = new FeedFragment();
+            } else {
+                newContent = fF;
             }
             break;
         }
