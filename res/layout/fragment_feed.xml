@@ -9,7 +9,6 @@
     <WebView
         android:id="@+id/feedView"
 		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:background="@color/red" />
+		android:layout_height="fill_parent" />
     
 </LinearLayout>
