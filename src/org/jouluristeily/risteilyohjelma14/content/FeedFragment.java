@@ -5,10 +5,15 @@ import org.jouluristeily.risteilyohjelma14.StartActivity;
 import org.jouluristeily.risteilyohjelma14.helpers.TouchImageView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -24,6 +29,7 @@ public class FeedFragment extends SherlockFragment {
     private static ImageView karttanappi_ravintolat;
     private static TouchImageView kartta;
     private static boolean[] toggleStates;
+    private static final String URL_FEED = "http://sasuomi.github.com/risteilyfeed";
 
     public FeedFragment() {
 
@@ -39,9 +45,14 @@ public class FeedFragment extends SherlockFragment {
         if (mPos == -1 && savedInstanceState != null) {
             mPos = savedInstanceState.getInt("mPos");
         }
-        final LinearLayout karttalayout = (LinearLayout) inflater.inflate(
+        final LinearLayout feedlayout = (LinearLayout) inflater.inflate(
                 R.layout.fragment_feed, container, false);
-
+        WebView feedView = (WebView) feedlayout.findViewById(R.id.feedView);
+        feedView.setWebViewClient(new WebViewClient());
+        feedView.setBackgroundColor(getResources().getColor(R.color.fragment_tausta));
+        WebSettings webSettings = feedView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        feedView.loadUrl(URL_FEED);
         setHasOptionsMenu(true);
         setRetainInstance(true);
         getSherlockActivity().getSupportActionBar().setLogo(
@@ -49,7 +60,7 @@ public class FeedFragment extends SherlockFragment {
         StartActivity.sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 
         // Inflate the layout for this fragment
-        return karttalayout;
+        return feedlayout;
 
     }
 
@@ -57,4 +68,19 @@ public class FeedFragment extends SherlockFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
     }
+    /*
+    private class MyWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            if (Uri.parse(url).getHost().equals(URL_FEED)) {
+                // This is my web site, so do not override; let my WebView load the page
+                return false;
+            }
+            // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+            return true;
+        }
+    }
+    */
 }
