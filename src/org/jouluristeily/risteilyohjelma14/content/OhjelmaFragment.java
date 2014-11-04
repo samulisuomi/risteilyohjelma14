@@ -193,8 +193,11 @@ public class OhjelmaFragment extends SherlockFragment {
             viewHolder.tapahtumapaikkaView.setText(list.get(position)
                     .getPaikka());
 
-            if (list.get(position).getAlkaa().equals("20:15")
-                    || list.get(position).getAlkaa().equals("19:15")) {
+            // TODO: listan eka/viimeinen
+            if (list.get(position).getNimi()
+                    .equals("Baltic Princess lähtee Turusta")
+                    || list.get(position).getNimi()
+                            .equals("Baltic Princess saapuu Turkuun")) {
                 viewHolder.tapahtumapaikkaView.setVisibility(TextView.GONE);
             } else {
                 viewHolder.tapahtumapaikkaView.setVisibility(TextView.VISIBLE);
