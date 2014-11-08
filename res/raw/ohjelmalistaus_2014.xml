@@ -4,7 +4,7 @@
 		<paattyy></paattyy>
 		<nimi>Baltic Princess lähtee Turusta</nimi>
 		<paikka></paikka>
-		<kuvaus>Ravintolat aukeavat</kuvaus>
+		<kuvaus>Ravintolat aukeavat.</kuvaus>
 		<kansi></kansi>
 	</tapahtuma>
 	<tapahtuma>
@@ -18,13 +18,13 @@
 	<tapahtuma>
 		<alkaa>20:15</alkaa>
 		<paattyy>23:00</paattyy>
-		<nimi>Pianomusiikkia</nimi>
+		<nimi>Pianomusiikkia Naissoo Duo</nimi>
 		<paikka>Piano Bar</paikka>
 		<kuvaus></kuvaus>
 		<kansi>7</kansi>
 	</tapahtuma>
 	<tapahtuma>
-		<alkaa>20:15</alkaa>
+		<alkaa>21:15</alkaa>
 		<paattyy>23:00</paattyy>
 		<nimi>Trubaduuri Vaakku</nimi>
 		<paikka>Pub</paikka>
@@ -104,7 +104,7 @@
 		<kansi>6-7</kansi>
 	</tapahtuma>
 	<tapahtuma>
-		<alkaa>02:30</alkaa>
+		<alkaa>02:00</alkaa>
 		<paattyy>04:30</paattyy>
 		<nimi>DJ:t Anza ja Peter Pan</nimi>
 		<paikka>Starlight Palace</paikka>
@@ -132,7 +132,7 @@
 		<paattyy>15:00</paattyy>
 		<nimi>NHL 15 -skabailua</nimi>
 		<paikka>Pub</paikka>
-		<kuvaus>Skabailut jatkuvat</kuvaus>
+		<kuvaus>Skabailut jatkuvat.</kuvaus>
 		<kansi>7</kansi>
 	</tapahtuma>
 	<tapahtuma>
@@ -185,10 +185,10 @@
 	</tapahtuma>	
 	<tapahtuma>
 		<alkaa>15:30</alkaa>
-		<paattyy>16:15</paattyy>
-		<nimi>DJ Tomi Alkio</nimi>
+		<paattyy>17:00</paattyy>
+		<nimi>Bilebändi J. Partynen</nimi>
 		<paikka>Starlight Palace</paikka>
-		<kuvaus>DJ Tomi Aikio nostaa paluumatkan bilefiiliksen korkeuksiin discomusalla.</kuvaus>
+		<kuvaus>Bilebändi J. Partynen nostaa paluumatkalla bilefiiliksen korkeuksiin.</kuvaus>
 		<kansi>6-7</kansi>
 	</tapahtuma>
 	<tapahtuma>
@@ -198,14 +198,6 @@
 		<paikka>Iskelmäbaari</paikka>
 		<kuvaus></kuvaus>
 		<kansi>6</kansi>
-	</tapahtuma>
-	<tapahtuma>
-		<alkaa>16:15</alkaa>
-		<paattyy>17:00</paattyy>
-		<nimi>Bilebändi J. Partynen Experience Band</nimi>
-		<paikka>Starlight Palace</paikka>
-		<kuvaus></kuvaus>
-		<kansi>6-7</kansi>
 	</tapahtuma>
 	<tapahtuma>
 		<alkaa>17:00</alkaa>
@@ -218,7 +210,7 @@
 	<tapahtuma>
 		<alkaa>16:45</alkaa>
 		<paattyy>17:30</paattyy>
-		<nimi>Pianomusiikkia Nassoo Duo</nimi>
+		<nimi>Pianomusiikkia Naissoo Duo</nimi>
 		<paikka>Piano Bar</paikka>
 		<kuvaus></kuvaus>
 		<kansi>7</kansi>
