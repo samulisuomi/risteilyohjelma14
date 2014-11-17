@@ -5,11 +5,14 @@ import org.jouluristeily.risteilyohjelma14.StartActivity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +33,7 @@ public class FeedFragment extends SherlockFragment {
 
     private int mPos = -1;
     private static WebView feedView;
-    private static final String URL_FEED = "http://sasuomi.github.com/risteilyfeed";
+    private static final String URL_FEED = "http://sasuomi.github.io/risteilyfeed/";
 
     public FeedFragment() {
 
@@ -49,8 +52,23 @@ public class FeedFragment extends SherlockFragment {
         final LinearLayout feedlayout = (LinearLayout) inflater.inflate(
                 R.layout.fragment_feed, container, false);
         feedView = (WebView) feedlayout.findViewById(R.id.feedView);
+        feedView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url.equals(URL_FEED)) {
+                    Log.i("moi", "eka");
+                    feedView.loadUrl(url);
+                    return true;
+                } else {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
+                            .parse(url));
+                    Log.i("moi", "toka");
+                    startActivity(browserIntent);
+                    return true;
+                }
+            }
+        });
         WebSettings webSettings = feedView.getSettings();
-        feedView.setWebViewClient(new WebViewClient());
         feedView.setBackgroundColor(getResources().getColor(
                 R.color.fragment_tausta));
         webSettings.setAppCachePath(getActivity().getCacheDir()
@@ -58,9 +76,10 @@ public class FeedFragment extends SherlockFragment {
         webSettings.setAllowFileAccess(true);
         webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        // webSettings.setDomStorageEnabled(true);
+        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ONLY);
 
-        refreshFeed();
+        loadFeedFromCache();
 
         setHasOptionsMenu(true);
         setRetainInstance(true);
@@ -91,6 +110,11 @@ public class FeedFragment extends SherlockFragment {
         return super.onOptionsItemSelected(item);
     }
 
+    private void loadFeedFromCache() {
+        feedView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ONLY);
+        feedView.loadUrl(URL_FEED);
+    }
+
     private void refreshFeed() {
         // Roaming:
         ContentResolver cr = getActivity().getContentResolver();
@@ -102,6 +126,7 @@ public class FeedFragment extends SherlockFragment {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        feedView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 
         if (!isNetworkAvailable() || isRoaming == 1) { // loading offline
             CharSequence text = "Ei verkkoyhteyttä tai verkkovierailu käynnissä";
