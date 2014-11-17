@@ -134,6 +134,11 @@ public class FeedFragment extends SherlockFragment {
             Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
             toast.show();
             feedView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ONLY);
+        } else {
+            CharSequence text = "Ladataan...";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
+            toast.show();
         }
         feedView.loadUrl(URL_FEED);
     }
