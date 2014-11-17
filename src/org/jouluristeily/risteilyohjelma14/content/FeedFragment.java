@@ -34,6 +34,7 @@ public class FeedFragment extends SherlockFragment {
     private int mPos = -1;
     private static WebView feedView;
     private static final String URL_FEED = "http://sasuomi.github.io/risteilyfeed/";
+    private static final String URL_FEED_CACHE = "http://sasuomi.github.io/risteilyfeed/#cache";
 
     public FeedFragment() {
 
@@ -55,7 +56,7 @@ public class FeedFragment extends SherlockFragment {
         feedView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url.equals(URL_FEED)) {
+                if (url.equals(URL_FEED) || url.equals(URL_FEED_CACHE)) {
                     Log.i("moi", "eka");
                     feedView.loadUrl(url);
                     return true;
@@ -76,7 +77,7 @@ public class FeedFragment extends SherlockFragment {
         webSettings.setAllowFileAccess(true);
         webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
-        // webSettings.setDomStorageEnabled(true);
+        webSettings.setDomStorageEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ONLY);
 
         loadFeedFromCache();
@@ -112,7 +113,7 @@ public class FeedFragment extends SherlockFragment {
 
     private void loadFeedFromCache() {
         feedView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ONLY);
-        feedView.loadUrl(URL_FEED);
+        feedView.loadUrl(URL_FEED_CACHE);
     }
 
     private void refreshFeed() {
@@ -133,14 +134,15 @@ public class FeedFragment extends SherlockFragment {
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
             toast.show();
-            feedView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ONLY);
+            loadFeedFromCache();
         } else {
             CharSequence text = "Ladataan...";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
             toast.show();
+            feedView.loadUrl(URL_FEED);
         }
-        feedView.loadUrl(URL_FEED);
+
     }
 
     private boolean isNetworkAvailable() {
