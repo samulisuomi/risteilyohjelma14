@@ -22,6 +22,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class FeedFragment extends SherlockFragment {
     private int mPos = -1;
     private static WebView feedView;
     private static TextView disclaimerText;
+    private static ImageView instagram;
     private static Button disclaimerButton;
     private static final String URL_FEED = "http://sasuomi.github.io/risteilyfeed/";
     private static final String URL_FEED_CACHE = "http://sasuomi.github.io/risteilyfeed/#cache";
@@ -60,6 +62,7 @@ public class FeedFragment extends SherlockFragment {
         }
         final LinearLayout feedlayout = (LinearLayout) inflater.inflate(
                 R.layout.fragment_feed, container, false);
+
         disclaimerText = (TextView) feedlayout
                 .findViewById(R.id.risteilyfeed_disclaimer);
         disclaimerButton = (Button) feedlayout
@@ -78,6 +81,16 @@ public class FeedFragment extends SherlockFragment {
                 if (!feedHasBeenLoadedOnce(getActivity())) {
                     refreshFeed();
                 }
+            }
+        });
+
+        instagram = (ImageView) feedlayout.findViewById(R.id.image_instagram);
+        instagram.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
+                        .parse("http://www.instagram.com/"));
+                startActivity(browserIntent);
             }
         });
 
