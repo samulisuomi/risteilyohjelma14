@@ -33,10 +33,29 @@
         	android:scaleType="fitCenter"
         	android:adjustViewBounds="true"/>
 	</LinearLayout>
+	<TextView
+    	android:id="@+id/risteilyfeed_disclaimer"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/risteilyfeed_disclaimer_text"
+    	android:textAlignment="center"
+    	android:layout_gravity="center"
+    	android:padding="16dp"
+    	android:gravity="center"
+    	android:textSize="16sp"
+    	android:textColor="#7c7c7c" />
+	<Button
+	    android:id="@+id/risteilyfeed_button_ok"
+	    android:padding="0dp"
+	    android:layout_marginBottom="32dp"
+	    android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok" />
     <WebView
         android:id="@+id/feedView"
         android:layout_weight="1"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent" />
+		android:layout_height="0dp" />
     
 </LinearLayout>

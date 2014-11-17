@@ -14,14 +14,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -35,6 +37,8 @@ public class FeedFragment extends SherlockFragment {
 
     private int mPos = -1;
     private static WebView feedView;
+    private static TextView disclaimerText;
+    private static Button disclaimerButton;
     private static final String URL_FEED = "http://sasuomi.github.io/risteilyfeed/";
     private static final String URL_FEED_CACHE = "http://sasuomi.github.io/risteilyfeed/#cache";
     private static final String PREFS_NAME = "FeedFile";
@@ -56,18 +60,37 @@ public class FeedFragment extends SherlockFragment {
         }
         final LinearLayout feedlayout = (LinearLayout) inflater.inflate(
                 R.layout.fragment_feed, container, false);
+        disclaimerText = (TextView) feedlayout
+                .findViewById(R.id.risteilyfeed_disclaimer);
+        disclaimerButton = (Button) feedlayout
+                .findViewById(R.id.risteilyfeed_button_ok);
+        if (disclaimerChecked(getActivity())) {
+            disclaimerText.setVisibility(TextView.GONE);
+            disclaimerButton.setVisibility(Button.GONE);
+        }
+        disclaimerButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                disclaimerText.setVisibility(TextView.GONE);
+                disclaimerButton.setVisibility(Button.GONE);
+                setDisclaimerChecked(getActivity());
+
+                if (!feedHasBeenLoadedOnce(getActivity())) {
+                    refreshFeed();
+                }
+            }
+        });
+
         feedView = (WebView) feedlayout.findViewById(R.id.feedView);
         feedView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 if (url.equals(URL_FEED) || url.equals(URL_FEED_CACHE)) {
-                    Log.i("moi", "eka");
                     feedView.loadUrl(url);
                     return true;
                 } else {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
                             .parse(url));
-                    Log.i("moi", "toka");
                     startActivity(browserIntent);
                     return true;
                 }
@@ -141,7 +164,9 @@ public class FeedFragment extends SherlockFragment {
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
             toast.show();
-            loadFeedFromCache();
+            if (feedHasBeenLoadedOnce(getActivity())) {
+                loadFeedFromCache();
+            }
         } else {
             CharSequence text = "Ladataan...";
             int duration = Toast.LENGTH_SHORT;
@@ -188,5 +213,13 @@ public class FeedFragment extends SherlockFragment {
 
     public static void setLoadedOnceFlag(Context context) {
         saveToSP(context, "FLAG_FEED_LOADED_ONCE", "1");
+    }
+
+    public static boolean disclaimerChecked(Context context) {
+        return (readFromSP(context, "FLAG_DISCLAIMER_CHECKED") != null);
+    }
+
+    public static void setDisclaimerChecked(Context context) {
+        saveToSP(context, "FLAG_DISCLAIMER_CHECKED", "1");
     }
 }
