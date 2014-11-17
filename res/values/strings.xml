@@ -18,5 +18,7 @@
 	<string name="suomenaikadisclaimer">Ajat ovat Suomen aikoja - muutokset mahdollisia.</string>
 	<string name="sulje">Sulje</string>
 	<string name="hyttimuistio_tyhja_lista">Et ole tallentanut vielä yhtään hyttiä muistiin!</string>
+	<string name="risteilyfeed_instagram_text">Jouluristeilyhetkiä Instagramista! Jaa omasi tägillä #jouluristeily ➙</string>
+	<string name="risteilyfeed_disclaimer">Ominaisuus käyttää verkkoyhteyttä vain kun itse painat Päivitä-painiketta.</string>
 	<string name="paivita">Päivitä</string>
 </resources>

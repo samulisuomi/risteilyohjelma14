@@ -3,12 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:background="@color/fragment_tausta" >
-
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		<TextView
+	    	android:id="@+id/risteilyfeed_instagram"
+	    	android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:text="@string/risteilyfeed_instagram_text"
+	    	android:textSize="16sp"
+	    	android:layout_weight="1"
+	    	android:textAlignment="center"
+	    	android:gravity="center"
+	    	android:layout_gravity="center"
+	    	android:textColor="@color/white" />
+		<ImageView
+    	    android:layout_width="48dp"
+        	android:layout_height="48dp"
+        	android:padding="4dp"
+        	android:src="@drawable/instagram"
+        	android:scaleType="fitCenter"
+        	android:adjustViewBounds="true"/>
+	</LinearLayout>
     <WebView
         android:id="@+id/feedView"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent" />
+        android:layout_weight="1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
     
 </LinearLayout>
