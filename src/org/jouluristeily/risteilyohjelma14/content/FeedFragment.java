@@ -5,7 +5,9 @@ import org.jouluristeily.risteilyohjelma14.StartActivity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -35,6 +37,8 @@ public class FeedFragment extends SherlockFragment {
     private static WebView feedView;
     private static final String URL_FEED = "http://sasuomi.github.io/risteilyfeed/";
     private static final String URL_FEED_CACHE = "http://sasuomi.github.io/risteilyfeed/#cache";
+    private static final String PREFS_NAME = "FeedFile";
+    private static SharedPreferences sp;
 
     public FeedFragment() {
 
@@ -80,8 +84,11 @@ public class FeedFragment extends SherlockFragment {
         webSettings.setDomStorageEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ONLY);
 
-        loadFeedFromCache();
+        if (feedHasBeenLoadedOnce(getActivity())) {
+            loadFeedFromCache();
+        } else {
 
+        }
         setHasOptionsMenu(true);
         setRetainInstance(true);
         getSherlockActivity().getSupportActionBar().setLogo(
@@ -127,7 +134,7 @@ public class FeedFragment extends SherlockFragment {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        feedView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        feedView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 
         if (!isNetworkAvailable() || isRoaming == 1) { // loading offline
             CharSequence text = "Ei verkkoyhteyttä tai verkkovierailu käynnissä";
@@ -141,6 +148,7 @@ public class FeedFragment extends SherlockFragment {
             Toast toast = Toast.makeText(getSherlockActivity(), text, duration);
             toast.show();
             feedView.loadUrl(URL_FEED);
+            setLoadedOnceFlag(getActivity());
         }
 
     }
@@ -162,14 +170,23 @@ public class FeedFragment extends SherlockFragment {
         return isConnected;
     }
 
-    /*
-     * private class MyWebViewClient extends WebViewClient {
-     * 
-     * @Override public boolean shouldOverrideUrlLoading(WebView view, String
-     * url) { if (Uri.parse(url).getHost().equals(URL_FEED)) { // This is my web
-     * site, so do not override; let my WebView load the page return false; } //
-     * Otherwise, the link is not for a page on my site, so launch another
-     * Activity that handles URLs Intent intent = new Intent(Intent.ACTION_VIEW,
-     * Uri.parse(url)); startActivity(intent); return true; } }
-     */
+    public static void saveToSP(Context context, String key, String value) {
+        sp = context.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    public static String readFromSP(Context context, String key) {
+        sp = context.getSharedPreferences(PREFS_NAME, 0);
+        return sp.getString(key, null);
+    }
+
+    public static boolean feedHasBeenLoadedOnce(Context context) {
+        return (readFromSP(context, "FLAG_FEED_LOADED_ONCE") != null);
+    }
+
+    public static void setLoadedOnceFlag(Context context) {
+        saveToSP(context, "FLAG_FEED_LOADED_ONCE", "1");
+    }
 }
