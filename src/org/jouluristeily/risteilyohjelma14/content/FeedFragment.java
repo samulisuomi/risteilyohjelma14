@@ -58,7 +58,6 @@ public class FeedFragment extends SherlockFragment {
         webSettings.setAllowFileAccess(true);
         webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setJavaScriptEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
         refreshFeed();
