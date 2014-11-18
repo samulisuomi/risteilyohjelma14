@@ -11,13 +11,17 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.webkit.ConsoleMessage;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -54,6 +58,7 @@ public class FeedFragment extends SherlockFragment {
         mPos = pos;
     }
 
+    @SuppressLint("NewApi")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -109,16 +114,35 @@ public class FeedFragment extends SherlockFragment {
                 }
             }
         });
+        // TODO: THIS IS A DIRTY FIX!!
+        feedView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+                if (consoleMessage.message()
+                        .contains("Uncaught ReferenceError")) {
+                    Log.i("ro14", "reference error");
+                    loadFeedFromCache();
+                }
+                return super.onConsoleMessage(consoleMessage);
+            }
+
+        });
         WebSettings webSettings = feedView.getSettings();
+        webSettings.setAllowFileAccess(true);
+        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
         feedView.setBackgroundColor(getResources().getColor(
                 R.color.fragment_tausta));
         webSettings.setAppCachePath(getActivity().getCacheDir()
                 .getAbsolutePath());
-        webSettings.setAllowFileAccess(true);
+
         webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
-        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ONLY);
+        webSettings.setAllowUniversalAccessFromFileURLs(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
 
         if (feedHasBeenLoadedOnce(getActivity())) {
             loadFeedFromCache();
@@ -155,6 +179,7 @@ public class FeedFragment extends SherlockFragment {
     }
 
     private void loadFeedFromCache() {
+        Log.i("ro14", "cache");
         feedView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ONLY);
         feedView.loadUrl(URL_FEED_CACHE);
     }
