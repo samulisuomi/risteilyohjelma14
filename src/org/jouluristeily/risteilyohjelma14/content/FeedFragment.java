@@ -50,6 +50,7 @@ public class FeedFragment extends SherlockFragment {
     private static final String URL_FEED_CACHE = "http://sasuomi.github.io/risteilyfeed/#cache";
     private static final String PREFS_NAME = "FeedFile";
     private static SharedPreferences sp;
+    private static int errorCount;
 
     public FeedFragment() {
 
@@ -130,13 +131,23 @@ public class FeedFragment extends SherlockFragment {
             }
         });
         // TODO: THIS IS A DIRTY FIX!!
+        errorCount = 0;
         feedView.setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
                 if (consoleMessage.message()
                         .contains("Uncaught ReferenceError")) {
                     Log.i("ro14", "reference error");
-                    loadFeedFromCache();
+                    if (errorCount < 5) {
+                        loadFeedFromCache();
+                        errorCount++;
+                    } else {
+                        CharSequence text = "Tapahtui virhe välimuistin käsittelyssä. Päivitä sivu.";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(getSherlockActivity(),
+                                text, duration);
+                        toast.show();
+                    }
                 }
                 return super.onConsoleMessage(consoleMessage);
             }
