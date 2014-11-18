@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -93,9 +94,23 @@ public class FeedFragment extends SherlockFragment {
         instagram.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
-                        .parse("http://www.instagram.com/"));
-                startActivity(browserIntent);
+                /*
+                 * Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
+                 * .parse("http://www.instagram.com/"));
+                 * startActivity(browserIntent);
+                 */
+                String packageName = "com.instagram.android";
+                PackageManager packageManager = getActivity()
+                        .getPackageManager();
+                Intent intent = packageManager
+                        .getLaunchIntentForPackage(packageName);
+                if (intent == null) {
+                    Intent intentMarket = new Intent(Intent.ACTION_VIEW, Uri
+                            .parse("market://details?id=" + packageName));
+                    startActivity(intentMarket);
+                } else {
+                    startActivity(intent);
+                }
             }
         });
 
