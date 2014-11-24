@@ -84,7 +84,6 @@ public class FeedFragment extends SherlockFragment {
                 disclaimerText.setVisibility(TextView.GONE);
                 disclaimerButton.setVisibility(Button.GONE);
                 setDisclaimerChecked(getActivity());
-
                 if (!feedHasBeenLoadedOnce(getActivity())) {
                     refreshFeed();
                 }
