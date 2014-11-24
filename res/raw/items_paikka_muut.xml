@@ -4,4 +4,9 @@
 		<kansi>2</kansi>
 		<kuvaus>Sisäänpääsy viim. tuntia ennen sulkemista. Hinta 7 €, uimapukuvuokra 2 €.</kuvaus>
 	</paikka>
+	<paikka>
+		<nimi>LAL:n ja YKL:n ständit</nimi>
+		<kansi>7</kansi>
+		<kuvaus>Ständit sijaitsevat Piano Barissa.</kuvaus>
+	</paikka>
 </muut>

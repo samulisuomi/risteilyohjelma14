@@ -190,6 +190,10 @@ public class AukioloFragment extends SherlockFragment {
                     current.setAukiolot(AukioloItemXmlPullParser
                             .getAukioloItemsFromXml(getActivity(),
                                     R.raw.items_ao_muut_saunaosasto));
+                } else if (current.getNimi().equals("LAL:n ja YKL:n ständit")) {
+                    current.setAukiolot(AukioloItemXmlPullParser
+                            .getAukioloItemsFromXml(getActivity(),
+                                    R.raw.items_ao_muut_standit));
                 }
             }
         }
@@ -225,13 +229,10 @@ public class AukioloFragment extends SherlockFragment {
                     // ravintolat
                     trueIndex = arg2 - 15;
                     klikattuItem = paikkaItems_ravintolat.get(trueIndex);
-                    // } else if (arg2 < 22) {
-                    // // muut
-                    // trueIndex = arg2 - 21; // == 0
-                    // klikattuItem = paikkaItems_muut.get(trueIndex);
-                    // }
-                } else {
-                    klikattuItem = paikkaItems_muut.get(0);
+                } else if (arg2 < 23) {
+                    // muut
+                    trueIndex = arg2 - 21; // == 0
+                    klikattuItem = paikkaItems_muut.get(trueIndex);
                 }
 
                 if (klikattuItem != null) {
