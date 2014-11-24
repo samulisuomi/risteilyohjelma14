@@ -37,6 +37,7 @@
         android:layout_weight="1"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
+        android:divider="@color/grey"
         android:cacheColorHint="#00000000" >
     </ListView>
 </LinearLayout>
